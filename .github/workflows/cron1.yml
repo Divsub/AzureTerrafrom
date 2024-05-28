@@ -3,7 +3,7 @@ name: CI
 # Controls when the workflow will run
 on:
   schedule:
-    - cron: '53 11 * * 2'  
+    - cron: '54 11 * * 2'  
   # Triggers the workflow on push or pull request events but only for the "main" branch
   # push:
   #   branches: [ "main" ]
