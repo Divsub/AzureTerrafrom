@@ -1,5 +1,5 @@
 resource "azurerm_virtual_machine" "vm1" {
-  name                  = "testetstetestvm"
+  name                  = "testetstetestvm3"
   resource_group_name   = "TerraformRG"
   location              = "East US"
   network_interface_ids = [azurerm_network_interface.nic1.id]
@@ -37,7 +37,7 @@ resource "azurerm_virtual_machine" "vm1" {
 }
 
 resource "azurerm_virtual_network" "vnet1" {
-  name                = "testetstetest"
+  name                = "testetstetest3"
   address_space       = ["10.0.0.0/16"]
   location            = "East US"
   resource_group_name = "TerraformRG"
@@ -45,19 +45,19 @@ resource "azurerm_virtual_network" "vnet1" {
 
 
 resource "azurerm_subnet" "subnet1" {
-  name                 = "hrmante"
+  name                 = "hrmante3"
   resource_group_name  = "TerraformRG"
   virtual_network_name = azurerm_virtual_network.vnet1.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
 resource "azurerm_network_interface" "nic1" {
-  name                = "vishnunic111"
+  name                = "vishnunic1113"
   location            = "East US"
   resource_group_name = "TerraformRG"
 
   ip_configuration {
-    name                          = "config111"
+    name                          = "config1113"
     subnet_id                     = azurerm_subnet.subnet1.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id =azurerm_public_ip.public1.id
